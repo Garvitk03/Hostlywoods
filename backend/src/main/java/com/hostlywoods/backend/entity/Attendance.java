@@ -3,27 +3,25 @@ package com.hostlywoods.backend.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class Room {
+public class Attendance {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String roomNumber;
+    private Long studentId;
 
-    private String type;
+    private String studentName;
 
-    private Double price;
+    private LocalDateTime scanTime;
 
-    private Integer capacity;
-
-    private Integer occupiedCount = 0;
-
-    private boolean occupied;
+    private String status;
 }

@@ -1,29 +1,27 @@
 package com.hostlywoods.backend.entity;
-
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class Room {
-
+public class Payment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String roomNumber;
+    private Double amount;
 
-    private String type;
+    private String paymentType;
 
-    private Double price;
+    private String status = "PENDING";
 
-    private Integer capacity;
+    private LocalDateTime paymentDate;
 
-    private Integer occupiedCount = 0;
-
-    private boolean occupied;
+    @ManyToOne
+    private Student student;
 }

@@ -8,22 +8,17 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class Room {
-
+public class Complaint {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String roomNumber;
+    private String title;
 
-    private String type;
+    private String description;
 
-    private Double price;
+    private String status = "PENDING";
 
-    private Integer capacity;
-
-    private Integer occupiedCount = 0;
-
-    private boolean occupied;
+    @ManyToOne
+    private Student student;
 }
