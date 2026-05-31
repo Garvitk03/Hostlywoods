@@ -4,8 +4,9 @@ import Login from "../pages/auth/LoginPage";
 import DashboardPage from "../pages/dashboard/DashboardPage";
 
 import Rooms from "../pages/rooms/RoomPage";
-import AddRoom from "../pages/rooms/addroom";
-import UpdateRoom from "../pages/rooms/updateroom";
+import AddRoom from "../pages/rooms/AddRoom";
+import UpdateRoom from "../pages/rooms/UpdateRoom";
+import DeleteRoom from "../pages/rooms/DeleteRoom";
 
 import Complaints from "../pages/complaints/ComplaintPage";
 import AddComplaint from "../pages/complaints/AddComplaint";
@@ -41,6 +42,8 @@ function App() {
                 <Route path="/add-room" element={<AddRoom />} />
 
                 <Route path="/update-room/:id" element={<UpdateRoom />} />
+
+                <Route path="/delete-room/:id" element={<DeleteRoom />} />
 
                 {/* COMPLAINT MANAGEMENT */}
 
