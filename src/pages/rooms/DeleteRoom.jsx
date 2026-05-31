@@ -1,6 +1,5 @@
 import axios from 'axios'
 import { successToast, errorToast } from '../../utils/toast';
-import { getAllRooms } from '../rooms/RoomPage';
 
 const deleteRoom = async (id) => {
 
